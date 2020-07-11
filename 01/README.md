@@ -1,4 +1,4 @@
-# visit :- [https://shotgun-02.github.io/js30/01/index.html]
+# visit :- [https://shotgun-02.github.io/js30/01/index.html](https://shotgun-02.github.io/js30/01/index.html)
 
 # :: Javascript 30 Days ::
 
