@@ -1,4 +1,4 @@
-#:: Javascript 30 Days ::
+# :: Javascript 30 Days ::
 
 ::__Day 1__::
 
