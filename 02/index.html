@@ -1,0 +1,27 @@
+<head>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hands">
+            <div class="hand hand-hour"></div>
+            <div class="hand hand-minute"></div>
+            <div class="hand hand-sec"></div>
+        </div>
+    </div>
+    <script>
+        function setDate() {
+            const now = new Date();
+            const secs = now.getSeconds();
+            // console.log(secs * 6);
+            document.querySelector('.hand.hand-sec').style.transform = `rotate(${(secs * 6) + 90}deg)`;
+            document.querySelector('.hand.hand-minute').style.transform = `rotate(${(now.getMinutes() * 6) + 90}deg)`;
+            document.querySelector('.hand.hand-hour').style.transform = `rotate(${(now.getHours() * 30) + 90}deg)`;
+        }
+
+        setInterval(() => {
+            setDate();
+        }, 1000);
+    </script>
+</body>
