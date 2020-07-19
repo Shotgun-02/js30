@@ -81,3 +81,59 @@ const totalYears = inventors.reduce((total, inventor) => {
 }, 0);
 
 console.log(totalYears);
+
+
+
+
+
+
+
+
+
+
+document.write(
+    `
+    // // 
+    //Array.prototype.filter()
+    // // // 1. filter the list of inventors born in 1500s.
+    // // // es6
+    // const fifteens = inventors.filter(x => x.year >= 1500 && x.year <= 1599);
+    
+    // // //es5
+    const fifteens = inventors.filter(function(inventor) {
+        if (inventor.year >= 1500 && inventor.year <= 1599) {
+            return true; // keep it
+        } // else { return false; }
+    });
+    // console.log(fifteens);
+    console.table(fifteens);
+    
+    
+    // //
+    // Array.prototype.map()
+    //  /// give us array of the inventors first & last name
+    const inventorsNames = inventors.map(inventor => \`$ {inventor.first} $ {inventor.last}\`);
+    // const inventorsNames = inventors.map(function(inventor) {
+    //     return \`$ {inventor.first} $ {inventor.last}\`;
+    // });
+    console.log(inventorsNames);
+    
+    // // 
+    // Array.prototype.sort()
+    // // //sort the inventors by birthdate, oldest to youngest
+    // const sortlist = inventors.sort(function(inventorA, inventorB) {
+    //     if (inventorA.year > inventorB.year) { return 1 } else { return -1 };
+    // });
+    
+    const sortlist = inventors.sort((inventorA, inventorB) => (inventorA.year > inventorB.year) ? 1 : -1);
+    console.table(sortlist);
+    
+    // // 
+    // Array.prototype.reduce
+    // // //total years of inventors
+    const totalYears = inventors.reduce((total, inventor) => {
+        return total + (inventor.passed - inventor.year);
+    }, 0);
+    
+    console.log(totalYears);`
+);
